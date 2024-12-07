@@ -10,7 +10,6 @@ public class PopController {
         String pop = null;
         String anoTexto= String.valueOf(ano);
         String so = getProperty("os.name").toLowerCase();
-        //System.out.println("Sistema Operacional detectado: " + so);
         String path = "";
 
         if(so.contains("win")){
