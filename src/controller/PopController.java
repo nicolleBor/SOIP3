@@ -41,7 +41,7 @@ public class PopController {
             }
 
             if(encontrouAno){
-                System.out.println("A população do ano de " + ano + " é de: " + pop);
+                System.out.println("A população americana no ano de " + ano + " era de: " + pop + " pessoas.");
             } else {
                 try {
                     throw new Exception("Ano " + ano + " não encontrado no arquivo.");
