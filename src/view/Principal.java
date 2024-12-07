@@ -8,9 +8,10 @@ public class Principal {
     public static void main(String[] args) throws IOException {
         int ano = Integer.parseInt(JOptionPane.showInputDialog("Insira um ano: "));
         if(ano < 1960 || ano > 2023){
-            while(ano < 1960 || ano > 2023) {
-                JOptionPane.showMessageDialog(null, "Não há dados para o ano inserido. Digite novamente.");
-                ano = Integer.parseInt(JOptionPane.showInputDialog("Insira um ano: "));
+            try {
+                throw new Exception("Ano " + ano + " não encontrado no arquivo.");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
         }
         PopController pop = new PopController();
